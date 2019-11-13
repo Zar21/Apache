@@ -1,0 +1,107 @@
+<html>
+<head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+span.cls_002{font-family:Arial,serif;font-size:18.1px;color:rgb(0,255,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_002{font-family:Arial,serif;font-size:18.1px;color:rgb(0,255,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_003{font-family:Arial,serif;font-size:11.1px;color:rgb(0,255,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_003{font-family:Arial,serif;font-size:11.1px;color:rgb(0,255,0);font-weight:normal;font-style:normal;text-decoration: none}
+-->
+</style>
+<script type="text/javascript" src="assets/wz_jsgraphics.js"></script>
+</head>
+<body>
+<div style="position:absolute;left:50%;margin-left:-298px;top:0px;width:596px;height:843px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="assets/background1.jpg" width=596 height=843></div>
+<div style="position:absolute;left:216.18px;top:71.31px" class="cls_002"><span class="cls_002">APACHE</span></div>
+<div style="position:absolute;left:72.06px;top:96.34px" class="cls_003"><span class="cls_003">1-SERVIDOR Php</span></div>
+<div style="position:absolute;left:72.06px;top:111.35px" class="cls_003"><span class="cls_003">Para crear el nuevo site lo primero que debemos hacer es copiar el site default de la carpeta</span></div>
+<div style="position:absolute;left:72.06px;top:126.36px" class="cls_003"><span class="cls_003">/etc/apache2/sites-available</span></div>
+<div style="position:absolute;left:72.06px;top:173.65px" class="cls_003"><span class="cls_003">Antes de configurar nada vamos a agregar el puerto 82 en el ports.conf para que podamos</span></div>
+<div style="position:absolute;left:72.06px;top:188.66px" class="cls_003"><span class="cls_003">usar este puerto en el site que vamos a crear</span></div>
+<div style="position:absolute;left:72.06px;top:435.62px" class="cls_003"><span class="cls_003">Ahora vamos a configurar nuestro site. Para el site 1 el archivo debe quedar asi:</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-298px;top:853px;width:596px;height:843px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="assets/background2.jpg" width=596 height=843></div>
+<div style="position:absolute;left:72.06px;top:71.57px" class="cls_003"><span class="cls_003">Lo que he hecho es asignar el puerto 82 a este site, se ha asignado la carpeta</span></div>
+<div style="position:absolute;left:72.06px;top:86.58px" class="cls_003"><span class="cls_003">/var/www/sitioPhp (Que debe ser creada), se ha cambiado la ruta del log, se ha cambiado el</span></div>
+<div style="position:absolute;left:72.06px;top:101.59px" class="cls_003"><span class="cls_003">formato de log que debe ser defenido en la fichero de configuración principal y se ha</span></div>
+<div style="position:absolute;left:72.06px;top:116.60px" class="cls_003"><span class="cls_003">agregado una pagina de error 404 personalizada que muestra el mensaje ‘Pagina no</span></div>
+<div style="position:absolute;left:72.06px;top:131.62px" class="cls_003"><span class="cls_003">encontrada’.</span></div>
+<div style="position:absolute;left:72.06px;top:161.64px" class="cls_003"><span class="cls_003">Vamos a agregar el formato perosonalizado al fichero de configuracion de apache</span></div>
+<div style="position:absolute;left:72.06px;top:446.13px" class="cls_003"><span class="cls_003">Para poder usar php en el site vamos a necesitar instalar el modulo y activarlo</span></div>
+<div style="position:absolute;left:72.06px;top:461.14px" class="cls_003"><span class="cls_003">Instalamos el php con :</span></div>
+<div style="position:absolute;left:72.06px;top:476.15px" class="cls_003"><span class="cls_003">sudo apt-get install php7.2</span></div>
+<div style="position:absolute;left:72.06px;top:491.17px" class="cls_003"><span class="cls_003">Y ademos instalamos el mod para apache</span></div>
+<div style="position:absolute;left:72.06px;top:506.18px" class="cls_003"><span class="cls_003">sudo apt-get install libapache2-mod-php7.2</span></div>
+<div style="position:absolute;left:72.06px;top:521.19px" class="cls_003"><span class="cls_003">En principio cuando instalamos el libapache2-mod-php7.2 el modulo se activa</span></div>
+<div style="position:absolute;left:72.06px;top:536.20px" class="cls_003"><span class="cls_003">automaticamente pero en caso de que no lo podemos activar con:</span></div>
+<div style="position:absolute;left:72.06px;top:551.22px" class="cls_003"><span class="cls_003">sudo a2enmod php7.2</span></div>
+<div style="position:absolute;left:72.06px;top:581.24px" class="cls_003"><span class="cls_003">Ahora creamos un simple php en la carpeta del site</span></div>
+<div style="position:absolute;left:72.06px;top:659.31px" class="cls_003"><span class="cls_003">Ahora activamos el site</span></div>
+<div style="position:absolute;left:72.06px;top:737.37px" class="cls_003"><span class="cls_003">Y actualizamos el apache con el comando que nos indican</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-298px;top:1706px;width:596px;height:843px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="assets/background3.jpg" width=596 height=843></div>
+<div style="position:absolute;left:72.06px;top:86.58px" class="cls_003"><span class="cls_003">Accedemos a localhost:82 y veremos que nuestro site esta funcionando correctamente</span></div>
+<div style="position:absolute;left:72.06px;top:189.41px" class="cls_003"><span class="cls_003">2-SERVIDOR NODE</span></div>
+<div style="position:absolute;left:72.06px;top:219.44px" class="cls_003"><span class="cls_003">Para empezar a crear el site de node vamos a copiar el archivo de sitioPhp y lo vamos a</span></div>
+<div style="position:absolute;left:72.06px;top:234.45px" class="cls_003"><span class="cls_003">configurar para que se ajuste a los requerimientos del site de node</span></div>
+<div style="position:absolute;left:72.06px;top:282.49px" class="cls_003"><span class="cls_003">Esta es la configuracion que demomento debe quedar</span></div>
+<div style="position:absolute;left:72.06px;top:606.76px" class="cls_003"><span class="cls_003">Se ha establecido la carpeta /var/www/sitioNode como la zona donde esta el contenido de la</span></div>
+<div style="position:absolute;left:72.06px;top:621.78px" class="cls_003"><span class="cls_003">web. Se ha establecido una redireccion en /documentación que te lleva a la pagina de</span></div>
+<div style="position:absolute;left:72.06px;top:636.79px" class="cls_003"><span class="cls_003">documentación de node. Se ha inidicado la ruta donde se guardara el fichero de logs.</span></div>
+<div style="position:absolute;left:72.06px;top:651.80px" class="cls_003"><span class="cls_003">Finalmente hemos habilitado el AllowOverride para poder crear un .htaccess</span></div>
+<div style="position:absolute;left:72.06px;top:711.85px" class="cls_003"><span class="cls_003">Vamos a crear un archivo de contraseñas</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-298px;top:2559px;width:596px;height:843px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="assets/background4.jpg" width=596 height=843></div>
+<div style="position:absolute;left:72.06px;top:139.87px" class="cls_003"><span class="cls_003">Vamos a crear el documento public_files y dentro de el vamos a crear un .htaccess con las</span></div>
+<div style="position:absolute;left:72.06px;top:154.88px" class="cls_003"><span class="cls_003">directivas necesarias para la autorización.</span></div>
+<div style="position:absolute;left:72.06px;top:323.78px" class="cls_003"><span class="cls_003">Para realizar el enrutamiento del puerto 81 al 3000 que es done tendremos funcionando</span></div>
+<div style="position:absolute;left:72.06px;top:338.79px" class="cls_003"><span class="cls_003">nuestro nodejs vamos a activar el modulo de proxy</span></div>
+<div style="position:absolute;left:72.06px;top:518.94px" class="cls_003"><span class="cls_003">Y vamos a configurar el site agregando estas directivas</span></div>
+<div style="position:absolute;left:72.06px;top:612.77px" class="cls_003"><span class="cls_003">Con todo configurado vamos a crear el servidor de node</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-298px;top:3412px;width:596px;height:843px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="assets/background5.jpg" width=596 height=843></div>
+<div style="position:absolute;left:72.06px;top:528.70px" class="cls_003"><span class="cls_003">Vamos a encender el servidor de node</span></div>
+<div style="position:absolute;left:72.06px;top:675.82px" class="cls_003"><span class="cls_003">Ahora vamos a activar el site que hemos creado y a hacer un reload a apache</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-298px;top:4265px;width:596px;height:843px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="assets/background6.jpg" width=596 height=843></div>
+<div style="position:absolute;left:72.06px;top:136.12px" class="cls_003"><span class="cls_003">Como podemos ver ahora estamos accediendo al servidor de node que esta en el puerto</span></div>
+<div style="position:absolute;left:72.06px;top:151.13px" class="cls_003"><span class="cls_003">3000 desde el puerto 81.</span></div>
+<div style="position:absolute;left:72.06px;top:181.16px" class="cls_003"><span class="cls_003">Ahora vamos a probar la redirecion de documentación a la pagina de documentación de</span></div>
+<div style="position:absolute;left:72.06px;top:196.17px" class="cls_003"><span class="cls_003">node.</span></div>
+<div style="position:absolute;left:72.06px;top:413.85px" class="cls_003"><span class="cls_003">Y finalmente vamos a acceder a public_files</span></div>
+<div style="position:absolute;left:72.06px;top:660.06px" class="cls_003"><span class="cls_003">Si ponemos las credenciales correctas se nos mostrara el index.html</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-298px;top:5118px;width:596px;height:843px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="assets/background7.jpg" width=596 height=843></div>
+<div style="position:absolute;left:72.06px;top:86.58px" class="cls_003"><span class="cls_003">GOACCESS</span></div>
+<div style="position:absolute;left:72.06px;top:139.87px" class="cls_003"><span class="cls_003">Lo primero que necesitamos es configurar algunos formatos en el fichero /etc/goaccess.conf</span></div>
+<div style="position:absolute;left:72.06px;top:154.88px" class="cls_003"><span class="cls_003">El formato que yo he configurado es similar al formato combined de apache (Es necesario</span></div>
+<div style="position:absolute;left:72.06px;top:169.90px" class="cls_003"><span class="cls_003">que el formato sea el mismo asi que he vuelo a poner el formato combined a los logs del</span></div>
+<div style="position:absolute;left:72.06px;top:184.91px" class="cls_003"><span class="cls_003">servidor de node)</span></div>
+<div style="position:absolute;left:72.06px;top:199.92px" class="cls_003"><span class="cls_003">En el archivo de configuración tenemos que descomentar los formatos que vamos a usar</span></div>
+<div style="position:absolute;left:72.06px;top:383.83px" class="cls_003"><span class="cls_003">Ahora para poder ver en nuestro servidor el reporte vamos a crear la carpeta log_sistem y</span></div>
+<div style="position:absolute;left:72.06px;top:398.84px" class="cls_003"><span class="cls_003">vamos a configurar para que el proxy ignore esa ruta</span></div>
+<div style="position:absolute;left:72.06px;top:438.62px" class="cls_003"><span class="cls_003">Y ahora ejecutamos este comando</span></div>
+<div style="position:absolute;left:72.06px;top:506.93px" class="cls_003"><span class="cls_003">Despues de acceder al servidor para generar reportes accedemos a</span></div>
+<div style="position:absolute;left:72.06px;top:521.94px" class="cls_003"><span class="cls_003"> </span><A HREF="http://localhost:81/log_sistem/">http://localhost:81/log_sistem/</A> </div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-298px;top:5971px;width:596px;height:843px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="assets/background8.jpg" width=596 height=843></div>
+</div>
+
+</body>
+</html>
